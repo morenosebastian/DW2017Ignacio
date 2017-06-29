@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+ xmlns:ui="http://java.sun.com/jsf/facelets"
+ xmlns:h="http://java.sun.com/jsf/html"
+ xmlns:f="http://java.sun.com/jsf/core"
+ xmlns:x="http://xmlns.jcp.org/jsf/passthrough"
+ xmlns:p="http://primefaces.org/ui"
+ xmlns:pm="http://primefaces.org/mobile">
+<head>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"></link>
+<meta charset="UTF-8"> </meta>
+<title>Atividade 3</title>
+</head>
+<h:body>
+	<h:form>
+	<h:selectOneRadio value="#{atividade3Bean.tipoSelecionado}">
+		<f:selectItem itemValue="Animal" itemLabel="Animal"></f:selectItem>
+		<f:selectItem itemValue="Fruta" itemLabel="Fruta"></f:selectItem>
+	</h:selectOneRadio>
+	<h:commandButton action="#{atividade3Bean.gerarLista()}" value="BOTAO"></h:commandButton>
+</h:form>
+
+	<h:form>
+		<h:dataTable value="#{atividade3Bean.listaAnimal}" var="animal" border="1">
+			<h:column>
+			#{animal.getNome()}
+			</h:column>
+			<h:column>
+			#{animal.getPeso()}
+			</h:column>
+			<h:column>
+			#{animal.getTipo()}
+			</h:column>
+		</h:dataTable>
+		
+		<h:dataTable value="#{atividade3Bean.listaFruta}" var="fruta" border="1">
+			<h:column>
+			#{fruta.getNome()}
+			</h:column>
+			<h:column>
+			#{fruta.getPeso()}
+			</h:column>
+			<h:column>
+			#{fruta.getSabor()}
+			</h:column>
+		</h:dataTable>
+	</h:form>
+</h:body>
+</html>

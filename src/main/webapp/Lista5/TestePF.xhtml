@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+ xmlns:ui="http://java.sun.com/jsf/facelets"
+ xmlns:h="http://java.sun.com/jsf/html"
+ xmlns:f="http://java.sun.com/jsf/core"
+ xmlns:x="http://xmlns.jcp.org/jsf/passthrough"
+ xmlns:p="http://primefaces.org/ui"
+ xmlns:pm="http://primefaces.org/mobile">
+<head>
+<link rel="stylesheet" type="text/css" href="css.css"></link>
+<meta charset="UTF-8"> </meta>
+<title>Insert title here</title>
+</head>
+<h:body>
+	<p:dataTable var="lista" value="#{atividade2Bean.lista}" >
+    <p:column headerText="Id">
+        <h:outputText value="#{lista}" />
+    </p:column>
+    , <p:column headerText="Id">
+        <h:outputText value="#{lista}" />
+    </p:column>
+    </p:dataTable>
+	<br/>
+	<br/>
+	<br/>
+	<br/>
+	<h:dataTable value="#{atividade2Bean.lista2}" var="fruta" border="1">
+	<p:column>
+	#{fruta}
+	</p:column>
+	</h:dataTable>
+</h:body>
+</html>

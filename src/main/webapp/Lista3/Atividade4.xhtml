@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+ xmlns:ui="http://java.sun.com/jsf/facelets"
+ xmlns:h="http://java.sun.com/jsf/html"
+ xmlns:f="http://java.sun.com/jsf/core"
+ xmlns:x="http://xmlns.jcp.org/jsf/passthrough"
+ xmlns:p="http://primefaces.org/ui"
+ xmlns:pm="http://primefaces.org/mobile">
+<head>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"></link>
+<meta charset="UTF-8"> </meta>
+<title>Atividade 4</title>
+</head>
+<h:body>
+<h:form>
+<h:inputText value="#{atividade4Bean.nome}"></h:inputText>
+
+<h:selectOneMenu value="#{atividade4Bean.profissao}">
+	<f:selectItem itemValue="Programador" itemLabel="Programador"></f:selectItem>
+	<f:selectItem itemValue="BackOffice" itemLabel="Back office"></f:selectItem>
+	<f:selectItem itemValue="AnalistaTI" itemLabel="Analista TI"></f:selectItem>
+</h:selectOneMenu>
+
+<h:selectOneRadio value="#{atividade4Bean.sexo}">
+	<f:selectItem itemValue="masculino" itemLabel="Masculino"></f:selectItem>
+	<f:selectItem itemValue="feminino" itemLabel="Feminino"></f:selectItem>
+</h:selectOneRadio>
+<h:commandButton action="#{atividade4Bean.salvarPessoa()}"></h:commandButton>
+</h:form>
+</h:body>
+</html>

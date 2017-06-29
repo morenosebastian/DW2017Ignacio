@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+ xmlns:ui="http://java.sun.com/jsf/facelets"
+ xmlns:h="http://java.sun.com/jsf/html"
+ xmlns:f="http://java.sun.com/jsf/core"
+ xmlns:x="http://xmlns.jcp.org/jsf/passthrough"
+ xmlns:p="http://primefaces.org/ui"
+ xmlns:pm="http://primefaces.org/mobile">
+<head>
+<meta charset="UTF-8"> </meta>
+<title>Lista Pessoas</title>
+</head>
+<h:body>
+	<h:form>
+	<h:dataTable value="#{atividade4Bean.listaPessoa}" var="pessoa">
+		<h:column>
+		#{pessoa.getNome()}	
+		</h:column>
+		<h:column>
+		#{pessoa.getProfissao()}	
+		</h:column>
+		<h:column>
+		#{pessoa.getSexo()}	
+		</h:column>
+	</h:dataTable>
+	
+	<h:commandButton action="#{atividade4Bean.voltar()}">
+		
+	</h:commandButton>
+	</h:form>
+</h:body>
+</html>
